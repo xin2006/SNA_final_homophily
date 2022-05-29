@@ -1,0 +1,110 @@
+---
+title: "Yelp_friendship"
+output: pdf_document
+---
+
+# Code for producing network graphs and computing assortativity
+
+```{r setup, include=FALSE}
+setwd("/Users/mac/Downloads/yelp_dataset")
+library('statnet')
+library('igraph')
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+
+### Frienship network of user_6
+```{r user_6}
+data_6 <- read.csv(file = "edge_yelp_u6.csv")
+attr_6 <- read.csv(file = "attribute_yelp_u6.csv")
+friends_6 = graph.data.frame(data_6,directed=FALSE, vertices = attr_6)
+friends_6
+plot(friends_6, 
+     vertex.size = 3.5,
+     edge.width = .5,
+     edge.curved = .1,
+     vertex.label.cex = 0.01,
+     main="Ego-network 1")
+
+assortativity(friends_6, V(friends_6)$count, directed = FALSE)
+assortativity(friends_6, V(friends_6)$star, directed = FALSE)
+
+```
+
+
+### Frienship network of user_7
+```{r user_7}
+data_7 <- read.csv(file = "edge_yelp_u7.csv")
+attr_7 <- read.csv(file = "attribute_yelp_u7.csv")
+friends_7 = graph.data.frame(data_7,directed=FALSE, vertices = attr_7)
+friends_7
+plot(friends_7, 
+     vertex.size = 3.5,
+     edge.width = .5,
+     edge.curved = .1,
+     vertex.label.cex = 0.01,
+     main="Ego-network 2")
+
+assortativity(friends_7, V(friends_7)$count, directed = FALSE)
+assortativity(friends_7, V(friends_7)$star, directed = FALSE)
+
+```
+
+
+
+### Frienship network of user_3
+```{r user_3}
+data_3 <- read.csv(file = "edge_yelp_u3.csv")
+attr_3 <- read.csv(file = "attribute_yelp_u3.csv")
+friends_3 = graph.data.frame(data_3,directed=FALSE, vertices = attr_3)
+friends_3
+plot(friends_3, 
+     vertex.size = 3.5,
+     edge.width = .5,
+     edge.curved = .1,
+     vertex.label.cex = 0.01,
+     main="Ego-network 3")
+
+assortativity(friends_3, V(friends_3)$count, directed = FALSE)
+assortativity(friends_3, V(friends_3)$star, directed = FALSE)
+
+```
+
+
+### Frienship network of user_8
+```{r user_8}
+data_8 <- read.csv(file = "edge_yelp_u8.csv")
+attr_8 <- read.csv(file = "attribute_yelp_8.csv")
+friends_8 = graph.data.frame(data_8,directed=FALSE, vertices = attr_8)
+friends_8
+plot(friends_8, 
+     vertex.size = 4,
+     edge.width = .5,
+     edge.curved = .1,
+     vertex.label.cex = 0.01,
+     main="Ego-network 4")
+
+assortativity(friends_8, V(friends_8)$count, directed = FALSE)
+assortativity(friends_8, V(friends_8)$star, directed = FALSE)
+```
+
+
+
+
+### Frienship network of user_5
+```{r user_5}
+data_5 <- read.csv(file = "edge_yelp_u5.csv")
+attr_5 <- read.csv(file = "attribute_yelp_u5.csv")
+friends_5 = graph.data.frame(data_5,directed=FALSE, vertices = attr_5)
+friends_5
+plot(friends_5, 
+     vertex.size = 4,
+     edge.width = .3,
+     edge.curved = .1,
+     vertex.label.cex = 0.01,
+     main="Ego-network 5")
+
+assortativity(friends_5, V(friends_5)$count, directed = FALSE)
+assortativity(friends_5, V(friends_5)$star, directed = FALSE)
+```
