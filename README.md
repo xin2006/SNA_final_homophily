@@ -10,4 +10,4 @@ pip install -r requirements.txt
 
 The processed data of edge and attribute for ego-networks are in the file folder ```data```.
 
-The code for visualizing the ego-networks and calculating assortitivity score is written in R markdown ```yelp_friendship.Rmd```. The installing of library 'statnet' and 'igraph' in R Studio is required.
+The code for visualizing the ego-networks and calculating assortativity score is written in R markdown ```yelp_friendship.Rmd```. The installing of library 'statnet' and 'igraph' in R Studio is required.
