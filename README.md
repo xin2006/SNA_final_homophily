@@ -8,6 +8,6 @@ The code for cleaning data provided by Yelp and construct ego-networks is shown 
 pip install -r requirements.txt
 ```
 
-The processed data of edge and attribute for ego-networks are in the file folder data.
+The processed data of edge and attribute for ego-networks are in the file folder ```data```.
 
 The code for visualizing the ego-networks and calculating assortitivity score is written in R markdown ```yelp_friendship.Rmd```.
